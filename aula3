@@ -54,3 +54,23 @@ alter table contatos drop column obs;
 
 -- apagar a tabela
 drop table contatos;
+
+/*********************** CRUD *************************/
+-- CRUD [Create]
+insert into contatos (nome,fone,email)
+value ('Vanderson Alves','99999-1234','van@email.com');
+
+insert into contatos (nome,fone)
+value ('Bill Gates','99999-2222');
+
+insert into contatos (nome,fone,email)
+value ('jose de assis','99999-1234','jose@email.com');
+
+insert into contatos (nome,email)
+value ('Linus tovalds','linus@email.com');
+
+-- exemplo de erro (limite de caracteres)
+insert into contatos(nome,fone,email)
+value ('Leandro Ramos','(55)(11)99999-8888','leandro@email.com');
+
+select * from contatos;
